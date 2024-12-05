@@ -1,6 +1,6 @@
-/*
 import 'package:dio/dio.dart';
-import 'package:newsapp_task/model/article.dart';
+
+import '../model/article.dart';
 
 class ApiService {
   Dio _dio = Dio();
@@ -20,6 +20,15 @@ class ApiService {
           }
 
     return articles;
-      }
+      }  }
+
+
+main()async {
+  ApiService apiService = ApiService();
+  List<Article> articles = await apiService.getNews();
+
+  for (var article in articles) {
+    print(article.title);
+  }
 }
-*/
+
