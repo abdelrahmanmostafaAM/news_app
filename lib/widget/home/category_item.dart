@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
-  CategoryItem({Key? key}) : super(key: key);
+  final String id;
+  String title;
+  String image;
 
-  String name = "";
-  String image = "";
+  const CategoryItem({
+    super.key,
+    required this.id,
+    required this.title,
+    required this.image,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,12 +18,15 @@ class CategoryItem extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30),
+        child: InkWell(
+          onTap: () {},
+        ),
         child: Container(
           width: 100,
           height: 100,
           child: Center(
             child: Text(
-              name,
+              "$name",
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 25,
@@ -28,8 +37,7 @@ class CategoryItem extends StatelessWidget {
             color: Colors.black12,
             borderRadius: BorderRadius.circular(30),
             image: DecorationImage(
-              image: NetworkImage(
-                  image),
+              image: NetworkImage("$image"),
               fit: BoxFit.fill,
             ),
           ),
