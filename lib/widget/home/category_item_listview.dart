@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp_task/services/data.dart';
 import 'package:newsapp_task/widget/home/article_item.dart';
 import 'package:newsapp_task/widget/home/category_item.dart';
 
@@ -14,7 +15,7 @@ class CategoryItemListView extends StatelessWidget {
             height: 100,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: 10,
+                itemCount: getCategories().length,
                 itemBuilder: (context, index) {
                   return CategoryItem();
                 }),

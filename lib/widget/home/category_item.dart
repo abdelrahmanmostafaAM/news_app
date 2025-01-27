@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 class CategoryItem extends StatelessWidget {
   CategoryItem({Key? key}) : super(key: key);
 
+  String name = "";
+  String image = "";
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,7 +17,7 @@ class CategoryItem extends StatelessWidget {
           height: 100,
           child: Center(
             child: Text(
-              "Space",
+              name,
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 25,
@@ -26,7 +29,7 @@ class CategoryItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(30),
             image: DecorationImage(
               image: NetworkImage(
-                  'https://cdn-icons-png.flaticon.com/256/15474/15474590.png'),
+                  image),
               fit: BoxFit.fill,
             ),
           ),

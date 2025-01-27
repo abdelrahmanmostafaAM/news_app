@@ -23,12 +23,6 @@ class ApiService {
       }  }
 
 
-main()async {
-  ApiService apiService = ApiService();
-  List<Article> articles = await apiService.getNews();
 
-  for (var article in articles) {
-    print(article.title);
-  }
-}
+
 
